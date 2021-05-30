@@ -1,0 +1,130 @@
+{
+  "project_info": {
+    "project_number": "641885748832",
+    "firebase_url": "https://find-food-1d9cd-default-rtdb.firebaseio.com",
+    "project_id": "find-food-1d9cd",
+    "storage_bucket": "find-food-1d9cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641885748832:android:aef09f55e2c6778bdf8d05",
+        "android_client_info": {
+          "package_name": "com.example.findfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641885748832-70gaqtni0d6ec857lnf0v16tgk5nnqke.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.findfood",
+            "certificate_hash": "b0bb4475c581656e5d3e3390439514534294ea91"
+          }
+        },
+        {
+          "client_id": "641885748832-otnrdeevpedevo187q8roe5k8f7ekokc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.findfood",
+            "certificate_hash": "4cf4307ad35b5a35d27b4d31485d65609b04a22e"
+          }
+        },
+        {
+          "client_id": "641885748832-kvj65anae8gdr0ogrihik1tm2rldcucq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBglA9rwJIT_nIP7MFT0C6rmnfMDRcYR2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641885748832-kvj65anae8gdr0ogrihik1tm2rldcucq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641885748832:android:90cd38bfc2f98292df8d05",
+        "android_client_info": {
+          "package_name": "com.shin.findfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641885748832-56tf5inh5tb31oh10g42fu1s84m639i5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shin.findfood",
+            "certificate_hash": "4cf4307ad35b5a35d27b4d31485d65609b04a22e"
+          }
+        },
+        {
+          "client_id": "641885748832-kvj65anae8gdr0ogrihik1tm2rldcucq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBglA9rwJIT_nIP7MFT0C6rmnfMDRcYR2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641885748832-kvj65anae8gdr0ogrihik1tm2rldcucq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641885748832:android:9d70b83b3ab4fe31df8d05",
+        "android_client_info": {
+          "package_name": "com.shin.foodstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641885748832-9ouar93jrofj2u7jvfm8di8uht684v2e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shin.foodstore",
+            "certificate_hash": "4cf4307ad35b5a35d27b4d31485d65609b04a22e"
+          }
+        },
+        {
+          "client_id": "641885748832-kvj65anae8gdr0ogrihik1tm2rldcucq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBglA9rwJIT_nIP7MFT0C6rmnfMDRcYR2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641885748832-kvj65anae8gdr0ogrihik1tm2rldcucq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
