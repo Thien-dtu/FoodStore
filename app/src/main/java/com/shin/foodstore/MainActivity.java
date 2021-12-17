@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this, R.color.xam));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        titletoolbar.setText("Home");
+        titletoolbar.setText("Trang Chủ");
         titletoolbar.setTextSize(30);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
@@ -57,22 +57,22 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment;
                 switch (item.getItemId()){
                     case R.id.thongke:
-                        titletoolbar.setText("Statistical");
+                        titletoolbar.setText("Thống Kê");
                         fragment = new FragmentStatistical();
                         loadFragment(fragment);
                         return true;
                     case R.id.category:
-                        titletoolbar.setText("Food");
+                        titletoolbar.setText("Đồ Ăn");
                         fragment = new Fragmentcategory();
                         loadFragment(fragment);
                         return true;
                     case R.id.manager:
-                        titletoolbar.setText("Chat");
+                        titletoolbar.setText("Nhắn Tin");
                         fragment = new Fragmentmanager();
                         loadFragment(fragment);
                         return true;
                     case R.id.profile:
-                        titletoolbar.setText("Profile");
+                        titletoolbar.setText("Thông Tin Cá Nhân");
                         fragment = new Fragmentproflie();
                         loadFragment(fragment);
                         return true;

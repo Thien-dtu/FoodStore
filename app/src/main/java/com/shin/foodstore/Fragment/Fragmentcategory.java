@@ -64,7 +64,7 @@ public class Fragmentcategory extends Fragment {
             public void onSuccess(ArrayList<Food> lists) {
                 foodArrayList.clear();
                 for (int i =0;i<lists.size();i++){
-                    if (lists.get(i).getIdstore().equalsIgnoreCase(idstore)){
+                    if (lists.get(i).getIdstore()!=null && lists.get(i).getIdstore().equalsIgnoreCase(idstore)){
                         foodArrayList.add(lists.get(i));
                         foodAdapter.notifyDataSetChanged();
                     }

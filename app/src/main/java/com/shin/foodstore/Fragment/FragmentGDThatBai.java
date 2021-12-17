@@ -56,14 +56,14 @@ public class FragmentGDThatBai extends Fragment {
 //
 //
                     }
-                    for (int j = 0; j < orderArrayList.size(); j++) {
-                        if (orderArrayList.get(j).getStore().getTokenstore().equalsIgnoreCase(firebaseUser.getUid())) {
-                            uidstore = orderArrayList.get(j).getStore().getTokenstore();
-
-
-
-                        }
-                    }
+//                    for (int j = 0; j < orderArrayList.size(); j++) {
+//                        if (orderArrayList.get(j).getStore().getTokenstore().equalsIgnoreCase(firebaseUser.getUid())) {
+//                            uidstore = orderArrayList.get(j).getStore().getTokenstore();
+//
+//
+//
+//                        }
+//                    }
 
 //
 

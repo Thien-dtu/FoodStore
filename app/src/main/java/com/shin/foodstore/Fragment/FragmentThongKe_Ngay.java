@@ -162,18 +162,18 @@ public class FragmentThongKe_Ngay extends Fragment {
                     arrayList.add(hdct);
                     String ngaytk = hdct.getNgay().substring(0, 2);
 
-                    for (int i = 0; i < arrayList.size(); i++) {
-                        if (arrayList.get(i).isCheck() == true) {
-                            orderArrayList.addAll(arrayList.get(i).getOrderArrayList());
-                        }
-                        for (int j = 0; j < orderArrayList.size(); j++) {
-                            if (orderArrayList.get(j).getStore().getTokenstore().equalsIgnoreCase(firebaseUser.getUid())) {
-                                uidstore = orderArrayList.get(j).getStore().getTokenstore();
-
-                            }
-                        }
-
-                    }
+//                    for (int i = 0; i < arrayList.size(); i++) {
+//                        if (arrayList.get(i).isCheck() == true) {
+//                            orderArrayList.addAll(arrayList.get(i).getOrderArrayList());
+//                        }
+//                        for (int j = 0; j < orderArrayList.size(); j++) {
+//                            if (orderArrayList.get(j).getStore().getTokenstore().equalsIgnoreCase(firebaseUser.getUid())) {
+//                                uidstore = orderArrayList.get(j).getStore().getTokenstore();
+//
+//                            }
+//                        }
+//
+//                    }
                     int tongngay=0;
                     if (ngay.matches(ngaytk) && hdct.isCheck() == true && uidstore.equalsIgnoreCase(firebaseUser.getUid())) {
                         orderArrayList1.addAll(hdct.getOrderArrayList());

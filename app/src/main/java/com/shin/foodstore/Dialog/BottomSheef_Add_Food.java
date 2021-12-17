@@ -154,7 +154,6 @@ public class BottomSheef_Add_Food extends BottomSheetDialogFragment {
                             theLoai.setTokenstore(mAuth.getUid());
                             databaseFood = new DatabaseFood(getActivity());
                             databaseFood.insert(theLoai);
-
                             dismiss();
                         }
                     }).addOnFailureListener(new OnFailureListener() {

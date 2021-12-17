@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,7 +27,7 @@ import java.util.ArrayList;
 public class DangKyActivity extends AppCompatActivity {
     EditText emailsignup, passsignup, nhaplaipass;
     Button btnsignup;
-    DatabaseStore databaseStore;
+    private DatabaseStore databaseStore;
     ArrayList<Store> datastore;
     private FirebaseAuth mAuth;
     FirebaseDatabase database;
@@ -42,67 +43,62 @@ public class DangKyActivity extends AppCompatActivity {
         passsignup = findViewById(R.id.passsignup);
         nhaplaipass = findViewById(R.id.nhaplaipass);
         btnsignup = findViewById(R.id.signup);
+
         database =FirebaseDatabase.getInstance();
         databaseReference = database.getReference("Store");
         mAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.profile_progressBar);
+
         btnsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = emailsignup.getText().toString().trim();
+                final String email = emailsignup.getText().toString().trim();
                 String pass = passsignup.getText().toString().trim();
                 String nhappass = nhaplaipass.getText().toString().trim();
-                if(!email.matches("^[a-zA-Z][a-z0-9_\\.]{4,32}@[a-z0-9]{2,}(\\.[a-z0-9]{2,4}){1,2}$")){
-                    Toast.makeText(getApplicationContext(), "Email Không Hợp Lệ", Toast.LENGTH_SHORT).show();
-                }else {
-                    if (email.isEmpty() || pass.isEmpty() || nhappass.isEmpty()){
-                        Toast.makeText(getApplicationContext(), "Vui lòng nhập đầy đủ các trường", Toast.LENGTH_SHORT).show();
-                    }else if (pass.length()<6){ Toast.makeText(getApplicationContext(), "Mật khẩu phải có ít nhất 6 ký tự!",
-                            Toast.LENGTH_SHORT).show();}
-                    else if (!(pass.matches(nhappass))){
-                        nhaplaipass.setError("Mật Khẩu Không Trùng Khớp");
-                    }else {
-                        databaseStore = new DatabaseStore(getApplicationContext());
-                        datastore = new ArrayList<>();
-                        databaseStore.getAll(new Storecallback() {
+                if (!email.matches("^[a-zA-Z][a-z0-9_\\.]{4,32}@[a-z0-9]{2,}(\\.[a-z0-9]{2,4}){1,2}$")) {
+                    emailsignup.setError("Email không hợp lệ.");
+                    return;
+                }
+                if (TextUtils.isEmpty(pass)) {
+                    passsignup.setError("Bắt buộc");
+                    return;
+                }
+                if (TextUtils.isEmpty(email)) {
+                    emailsignup.setError("Bắt buộc");
+                    return;
+                }
+                if (TextUtils.isEmpty(nhappass)) {
+                    nhaplaipass.setError("Bắt buộc");
+                    return;
+                }
+                if (pass.length() < 6) {
+                    passsignup.setError("Mật khẩu phải lớn hơn 6 ký tự");
+                    return;
+                }
+                if (!pass.equals(nhappass)) {
+                    nhaplaipass.setError("Mật khẩu không khớp");
+                }
+                progressBar.setVisibility(View.VISIBLE);
+                mAuth.createUserWithEmailAndPassword(email, pass)
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
-                            public void onSuccess(ArrayList<Store> lists) {
-                                datastore.clear();
-                                datastore.addAll(lists);
-                            }
-
-                            @Override
-                            public void onError(String message) {
-
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                progressBar.setVisibility(View.GONE);
+                                if (!task.isSuccessful()) {
+//                                    Toast.makeText(getApplicationContext(), "Đăng ký Thất Bại.",
+//                                            Toast.LENGTH_SHORT).show();
+                                } else {
+                                    databaseStore = new DatabaseStore(getApplicationContext());
+                                    Store store = new Store(email, pass, null, null, null, null, null, mAuth.getUid());
+                                    databaseStore.insert(store);
+//                                    Toast.makeText(getApplicationContext(), "Đăng Ký Thành Công.", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(getApplicationContext(), DangNhapActivity.class));
+                                    finish();
+                                }
                             }
                         });
-                        progressBar.setVisibility(View.VISIBLE);
-                        //create user
-                        mAuth.createUserWithEmailAndPassword(email,pass)
-                                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<AuthResult> task) {
-                                        progressBar.setVisibility(View.GONE);
-                                        if (task.isSuccessful()) {
-                                            for (int i = 0; i < datastore.size(); i++) {
-                                                if (datastore.get(i).getEmail().equalsIgnoreCase(email.toString()) && datastore.get(i).getPass().equalsIgnoreCase(pass.toString())) {
-                                                    Toast.makeText(getApplicationContext(), "Đăng Ký Thành Công", Toast.LENGTH_SHORT).show();
-                                                    Intent is = new Intent(getApplicationContext(), MainActivity.class);
-                                                    startActivity(is);
-                                                    break;
-                                                } else {
-                                                    Toast.makeText(getApplicationContext(), "Login Thất Bại", Toast.LENGTH_SHORT).show();
-                                                }
-                                            }
-                                        } else {
-                                            Toast.makeText(getApplicationContext(), "Login Thất Bại", Toast.LENGTH_SHORT).show();
-                                        }
-                                    }
-                                });
-                    }
-                }
 
-            }
+                    }
         });
     }
 }

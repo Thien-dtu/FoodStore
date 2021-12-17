@@ -71,19 +71,19 @@ public class FragmentThongKe_Thang extends Fragment {
                     arrayList.add(hdct);
                     String thangtk = hdct.getNgay().substring(3, 5);
 
-                    for (int i = 0; i < arrayList.size(); i++) {
-                        if (arrayList.get(i).isCheck() == true) {
-                            orderArrayList.addAll(arrayList.get(i).getOrderArrayList());
-                            orderArrayListt2.addAll(arrayList.get(i).getOrderArrayList());
-                        }
-                        for (int j = 0; j < orderArrayList.size(); j++) {
-                            if (orderArrayList.get(j).getStore().getTokenstore().equalsIgnoreCase(firebaseUser.getUid())) {
-                                uidstore = orderArrayList.get(j).getStore().getTokenstore();
-
-                            }
-                        }
-
-                    }
+//                    for (int i = 0; i < arrayList.size(); i++) {
+//                        if (arrayList.get(i).isCheck() == true) {
+//                            orderArrayList.addAll(arrayList.get(i).getOrderArrayList());
+//                            orderArrayListt2.addAll(arrayList.get(i).getOrderArrayList());
+//                        }
+//                        for (int j = 0; j < orderArrayList.size(); j++) {
+//                            if (orderArrayList.get(j).getStore().getTokenstore().equalsIgnoreCase(firebaseUser.getUid())) {
+//                                uidstore = orderArrayList.get(j).getStore().getTokenstore();
+//
+//                            }
+//                        }
+//
+//                    }
                     int tongngay=0;
                     if (thang12.matches(thangtk) && hdct.isCheck() == true && uidstore.equalsIgnoreCase(firebaseUser.getUid())) {
                         orderArrayList1.addAll(hdct.getOrderArrayList());
