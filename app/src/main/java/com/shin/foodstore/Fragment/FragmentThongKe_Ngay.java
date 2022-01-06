@@ -3,6 +3,7 @@ package com.shin.foodstore.Fragment;
 import android.app.DatePickerDialog;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -149,38 +150,35 @@ public class FragmentThongKe_Ngay extends Fragment {
         arrayList = new ArrayList<>();
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
 
-            ArrayList<Order> orderArrayList1 = new ArrayList<>();
+            ArrayList<Order> listOrder = new ArrayList<>();
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 arrayList.clear();
                 String uidstore = "";
 
                 ArrayList<Order> orderArrayList = new ArrayList<>();
-                orderArrayList.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     HDCT hdct = dataSnapshot.getValue(HDCT.class);
                     arrayList.add(hdct);
                     String ngaytk = hdct.getNgay().substring(0, 2);
-
-//                    for (int i = 0; i < arrayList.size(); i++) {
-//                        if (arrayList.get(i).isCheck() == true) {
-//                            orderArrayList.addAll(arrayList.get(i).getOrderArrayList());
-//                        }
-//                        for (int j = 0; j < orderArrayList.size(); j++) {
-//                            if (orderArrayList.get(j).getStore().getTokenstore().equalsIgnoreCase(firebaseUser.getUid())) {
-//                                uidstore = orderArrayList.get(j).getStore().getTokenstore();
-//
-//                            }
-//                        }
-//
-//                    }
-                    int tongngay=0;
-                    if (ngay.matches(ngaytk) && hdct.isCheck() == true && uidstore.equalsIgnoreCase(firebaseUser.getUid())) {
-                        orderArrayList1.addAll(hdct.getOrderArrayList());
-                        for (Order order : orderArrayList1) {
-                            tongngay += order.getSoluongmua() * order.getFood().getGia();
-
+                    for (int i = 0; i < arrayList.size(); i++) {
+                        if (arrayList.get(i).isCheck()) {
+                            orderArrayList.addAll(arrayList.get(i).getOrderArrayList());
                         }
+                        Log.d("VH11", "onDataChange: " + orderArrayList.toString());
+                        for (int j = 0; j < orderArrayList.size(); j++) {
+                            if (orderArrayList.get(j).getFood().getTokenstore().equalsIgnoreCase(firebaseUser.getUid())) {
+                                listOrder.add(orderArrayList.get(j));
+                            }
+                        }
+                    }
+                    Log.d("VH11", "onDataChange: " + listOrder.size()  + listOrder.toString());
+                    int tongngay=0;
+                    if (ngay.matches(ngaytk) && hdct.isCheck()) {
+                        for (Order order : listOrder) {
+                            tongngay += order.getSoluongmua() * order.getFood().getGia();
+                        }
+                        Log.e("VH111", "onDataChange: " + tongngay );
                         ArrayList<BarEntry> barEntries = new ArrayList<>();
                         barEntries.add(new BarEntry(0, tongngay));
                         BarDataSet barDataSet = new BarDataSet(barEntries, "Ngày");

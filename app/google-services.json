@@ -37,7 +37,90 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBglA9rwJIT_nIP7MFT0C6rmnfMDRcYR2o"
+          "current_key": "AIzaSyAKlX31jcVNe8u4pUZikQG9fbrT7Z3ECtA"
+        },
+        {
+          "current_key": "AIzaSyAir8NryeFf6s4ojXQc2nWU07WNmueCZH8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641885748832-kvj65anae8gdr0ogrihik1tm2rldcucq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641885748832:android:e72109f58522b1fedf8d05",
+        "android_client_info": {
+          "package_name": "com.example.shipper2hat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641885748832-btk8tkqqurgm2dmckablhqhtrcll9vfm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shipper2hat",
+            "certificate_hash": "b0bb4475c581656e5d3e3390439514534294ea91"
+          }
+        },
+        {
+          "client_id": "641885748832-kvj65anae8gdr0ogrihik1tm2rldcucq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKlX31jcVNe8u4pUZikQG9fbrT7Z3ECtA"
+        },
+        {
+          "current_key": "AIzaSyAir8NryeFf6s4ojXQc2nWU07WNmueCZH8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641885748832-kvj65anae8gdr0ogrihik1tm2rldcucq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641885748832:android:8475af52f6c27009df8d05",
+        "android_client_info": {
+          "package_name": "com.shin.adminfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641885748832-ebhq1dqa5gs2qhk8rmu5ttd6rmknrhp2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shin.adminfood",
+            "certificate_hash": "4cf4307ad35b5a35d27b4d31485d65609b04a22e"
+          }
+        },
+        {
+          "client_id": "641885748832-kvj65anae8gdr0ogrihik1tm2rldcucq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKlX31jcVNe8u4pUZikQG9fbrT7Z3ECtA"
+        },
+        {
+          "current_key": "AIzaSyAir8NryeFf6s4ojXQc2nWU07WNmueCZH8"
         }
       ],
       "services": {
@@ -74,7 +157,10 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBglA9rwJIT_nIP7MFT0C6rmnfMDRcYR2o"
+          "current_key": "AIzaSyAKlX31jcVNe8u4pUZikQG9fbrT7Z3ECtA"
+        },
+        {
+          "current_key": "AIzaSyAir8NryeFf6s4ojXQc2nWU07WNmueCZH8"
         }
       ],
       "services": {
@@ -97,6 +183,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "641885748832-6bubakt65m8c1u1hp0jr6gkc4acfh8vu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shin.foodstore",
+            "certificate_hash": "3743623781e4ca5479f30a82306afd4a429d2c86"
+          }
+        },
+        {
           "client_id": "641885748832-9ouar93jrofj2u7jvfm8di8uht684v2e.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -111,7 +205,10 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBglA9rwJIT_nIP7MFT0C6rmnfMDRcYR2o"
+          "current_key": "AIzaSyAKlX31jcVNe8u4pUZikQG9fbrT7Z3ECtA"
+        },
+        {
+          "current_key": "AIzaSyAir8NryeFf6s4ojXQc2nWU07WNmueCZH8"
         }
       ],
       "services": {

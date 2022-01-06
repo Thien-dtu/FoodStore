@@ -57,4 +57,15 @@ public class Order {
     public void setUser(User user) {
         this.user = user;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "idorder='" + idorder + '\'' +
+                ", food=" + food +
+                ", soluongmua=" + soluongmua +
+                ", store=" + store +
+                ", user=" + user +
+                '}';
+    }
 }

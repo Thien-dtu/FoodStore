@@ -19,7 +19,6 @@ public class HDCT {
         this.ngay = ngay;
         this.thoigian = thoigian;
         this.check = check;
-
         this.orderArrayList = orderArrayList;
     }
 
@@ -69,5 +68,17 @@ public class HDCT {
 
     public void setOrderArrayList(ArrayList<Order> orderArrayList) {
         this.orderArrayList = orderArrayList;
+    }
+
+    @Override
+    public String toString() {
+        return "HDCT{" +
+                "idhct='" + idhct + '\'' +
+                ", idhdon='" + idhdon + '\'' +
+                ", ngay='" + ngay + '\'' +
+                ", thoigian='" + thoigian + '\'' +
+                ", check=" + check +
+                ", orderArrayList=" + orderArrayList +
+                '}';
     }
 }
