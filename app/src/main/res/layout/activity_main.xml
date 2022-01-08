@@ -20,9 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/billabong"
-            android:layout_marginTop="5dp"
-            />
+            android:layout_marginTop="5dp" />
     </androidx.appcompat.widget.Toolbar>
     <FrameLayout
         android:id="@+id/fr_l"
