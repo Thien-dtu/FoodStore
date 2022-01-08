@@ -4,7 +4,7 @@
 
 ### Introduction
 
-- FindFood is a application use to help many people can search and buy food and drink during the epidemic season
+- FoodStore is a application use to help many people can sell food and drink during the epidemic season
 - All data is Real Time Database
 
 <img src="./assets/backgroud.jpg" alt="screenshot" width="300">
@@ -16,12 +16,12 @@
 ### Folder Structure:
 
 ```
-/FindFood:
+/FoodStore:
   /app
   /gradle
 ```
 
-- `FindFood`: include all the project's source code, divided into each module
+- `FoodStore`: include all the project's source code, divided into each module
 - `app`: source code of Application
 - `gradle`: source code of setting gradle
 
@@ -31,7 +31,9 @@
 | -------------------------------------------------------- | ------------------- | ------------------------------------------------------------- | -------------------------- |
 | <img src="./assets/avatar-members/thien.jpg" width="50"/>| Bui Duc Thien       | **Team Leader**, Fullstack Developer                          | buiducthien.dtu@gmail.com  |
 | <img src="./assets/avatar-members/ha.jpg" width="50"/>   | Phan Thị Việt Hà    | Front-end, UI/UX Design, Android                              | bely052@gmail.com          |
-| <img src="./assets/avatar-members/dong.png" width="50"/> | Nguyễn Văn Anh      | Design pattern, Tester                                        | *******************        |
+| <img src="./assets/avatar-members/hieu.jpg" width="50"/> | Nguyễn Hiếu         | Design database and UI/UI, Tester                             | monsterhieupke@gmail.com   |
+| <img src="./assets/avatar-members/dong.png" width="50"/> | Lê Văn Anh          | Tester                                                        | *******************        |
+
 
 ## Contributing:
 
