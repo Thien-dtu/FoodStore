@@ -1,4 +1,4 @@
-# FindFood
+# FoodStore
 
 ## Date: Feb 2021 - Jun 2021
 
